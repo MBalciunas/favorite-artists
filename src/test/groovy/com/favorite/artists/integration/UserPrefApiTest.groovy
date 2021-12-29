@@ -37,6 +37,10 @@ class UserPrefApiTest extends Specification {
     @Autowired
     ObjectMapper objectMapper
 
+    def setup() {
+        userPrefRepository.deleteAll()
+    }
+
     def "test save user pref and fetch top albums"() {
         expect:
         mockItunesClient()
