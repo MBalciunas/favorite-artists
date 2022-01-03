@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ArtistResponse {
 
+    private Long id;
     private String name;
     private String itunesUrl;
     private int amgArtistId;
@@ -21,6 +22,7 @@ public class ArtistResponse {
 
     public static ArtistResponse fromArtist(Artist artist) {
         return ArtistResponse.builder()
+                .id(artist.getId())
                 .amgArtistId(artist.getAmgArtistId())
                 .artistId(artist.getArtistId())
                 .itunesUrl(artist.getItunesUrl())

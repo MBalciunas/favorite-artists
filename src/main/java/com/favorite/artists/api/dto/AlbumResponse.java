@@ -6,17 +6,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class AlbumResponse {
 
-    @Id
-    @GeneratedValue
     private Long id;
     private String title;
     private String artistName;
